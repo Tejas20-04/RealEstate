@@ -44,7 +44,6 @@ export default function Projects() {
           className=" bg-gray-200 rounded p-3 mr-2 cursor-pointer"
           aria-label="Previous Project"
           onClick={prevtProject}
-          c
         >
           <img src={assets.left_arrow} alt="Previous" />
         </button>
@@ -72,7 +71,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-auto mb-14"
+                className="w-full h-auto mb-14 transition-transform duration-300 transform group-hover:scale-110"
               />
               <div className="absolute left-0 right-0 bottom-5 flex justify-center">
                 <div className="inline-block bg-white w-3/4 px-4 py-2 shadow-md">
