@@ -1,9 +1,14 @@
 import React, { use, useEffect, useState } from "react";
 import { assets, testimonialsData } from "../assets/assets";
+import { motion } from "motion/react";
 
 export default function () {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="container mx-auto py-10 lg:px-32 w-full overflow-hidden"
       id="Testimonials"
     >
@@ -39,6 +44,6 @@ export default function () {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

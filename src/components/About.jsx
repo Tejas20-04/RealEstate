@@ -1,11 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { assets } from "../assets/assets";
+import { motion } from "motion/react";
 
 export default function About() {
   return (
     <div>
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         className=" flex flex-col item center justify-center container mx-auto p-14 md:px-20 lg:px-32 
       width-full overflow-hidden text-center "
         id="About"
@@ -55,7 +60,7 @@ export default function About() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
